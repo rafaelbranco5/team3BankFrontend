@@ -9,6 +9,7 @@ const NavbarContainer = styled.ul`
     width: 100%;
     margin: 0;
     padding: 0;
+    max-height: 40px;
     background-color: #602fff;
     padding: 2rem;
     font-family: 'Lato', serif;
@@ -33,9 +34,10 @@ const NavbarContainer = styled.ul`
             font-size: .9rem;
             margin-right: 1rem;
             margin-top: -6px;
+            cursor: pointer;
         }
     }
-    h3 {
+    h2 {
         margin: 0;
         padding: 0;
         color: white;
@@ -49,7 +51,7 @@ function Navbar() {
                 <a href="#"><GiHamburgerMenu /> </a>
             </li>
             <li>
-                <h3>Real World App</h3>
+                <h2>Real World App</h2>
             </li>
             <li>
                 <div className='notifcationContainer'>
