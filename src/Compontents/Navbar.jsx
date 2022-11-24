@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { IoMdNotifications } from 'react-icons/io'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -42,9 +42,21 @@ const NavbarContainer = styled.ul`
         padding: 0;
         color: white;
     }
+    .notificationButtonCont{
+    }
+    .notificationIndicator{
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        /* z-index: 2; */
+        text-align: center;
+        color: white;
+    }
 `
 
 function Navbar() {
+    const [notification, setNotification] = useState(true)
     return (
         <NavbarContainer>
             <li>
@@ -56,7 +68,10 @@ function Navbar() {
             <li>
                 <div className='notifcationContainer'>
                     <button href="#">$ New</button>
-                    <a href="#"><IoMdNotifications /> </a>
+                    <div className='notificationButtonCont'>
+                        <a href="#"><IoMdNotifications /> </a>
+                        {notification && <span className='notificationIndicator'></span>}
+                    </div>
                 </div>
             </li>
         </NavbarContainer>
