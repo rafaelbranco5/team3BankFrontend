@@ -9,10 +9,13 @@ const LeftNavbarContainer = styled.div`
     max-width: 450px;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     text-align: left;
-    margin-top: 2.1rem;
-    margin-left: .5rem;
-    margin-right: 1rem;
+    padding-top: 2.1rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
+    background-color: white;
+    border-right: 1px solid #6363633d;
     font-family: 'Open Sans', serif;
     ul {
         li { list-style: none;}

@@ -7,10 +7,11 @@ const LayoutContainer = styled.main`
     display: flex;
     width: 100%;
     position: relative;
+    background-color: #f3f3f3;
     .childrenCont {
         position: absolute;
-        top: 50%;
-        left: 35%;
+        top: 15%;
+        left: 35vw;
     }
 `
 
