@@ -11,7 +11,7 @@ const LayoutContainer = styled.main`
     .childrenCont {
         position: absolute;
         top: 15%;
-        left: 35vw;
+        left: 20vw;
     }
 `
 

@@ -1,11 +1,14 @@
 import React from 'react'
 import Layout from '../Layout'
 import UserSettings from '../Compontents/UserSettings'
+import MainContainer from '../Compontents/MainContainer'
 
 const Settings = () => {
   return (
     <Layout>
-      <UserSettings />
+      <MainContainer>
+        <UserSettings />
+      </MainContainer>
     </Layout>
   )
 }

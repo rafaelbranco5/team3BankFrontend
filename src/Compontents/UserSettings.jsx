@@ -4,13 +4,6 @@ import online_test from '../assets/online_test.svg'
 import InputField from './InputField'
 
 const UserSettingsCont = styled.div`
-    display: flex;
-    background-color: #fdfdfd;
-    padding-bottom: 3rem;
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1); 
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
-    border-radius: 3px;
-    flex-direction: column;
     img {
         height: 250px;
     }
@@ -32,7 +25,7 @@ const UserSettingsCont = styled.div`
         margin-right: 5rem;
         margin-left: 1rem;
         input {
-            width: 400px;
+            min-width: 500px;
             font-size: 1rem;
         }
         button {

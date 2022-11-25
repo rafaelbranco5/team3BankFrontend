@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { IoMdNotifications } from 'react-icons/io'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const NavbarContainer = styled.ul`
     display: flex;
@@ -46,6 +48,7 @@ const NavbarContainer = styled.ul`
         padding: 0;
         color: white;
     }
+
     .notificationButtonCont{
     }
     .notificationIndicator{
@@ -57,14 +60,33 @@ const NavbarContainer = styled.ul`
         text-align: center;
         color: white;
     }
+    .extendedNav {
+        margin-right: 1rem;
+        text-align: left;
+        color: white;
+        ul {
+            display: flex;
+            li {
+                margin: 1rem;
+                button {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 `
 
 function TopNavbar() {
     const [notification, setNotification] = useState(true)
+    const [showextendedNav, setShowExtendedNav] = useState(false)
+    const extendNav = () => {
+        setShowExtendedNav(!showextendedNav);
+    }
     return (
         <NavbarContainer>
             <li>
-                <button><GiHamburgerMenu /> </button>
+                <button onClick={extendNav}><GiHamburgerMenu /> </button>
             </li>
             <li>
                 <h2>Real World App</h2>
@@ -78,6 +100,22 @@ function TopNavbar() {
                     </div>
                 </div>
             </li>
+            {showextendedNav &&
+                <li className='extendedNav'>
+                    <ul>
+                        <li>
+                            {/* <Link to={"/personal"}>Everyone</Link> */}
+                            <button>Everyone</button>
+                        </li>
+                        <li>
+                            <button>Friends</button>
+                        </li>
+                        <li>
+                            <button>Mine</button>
+                        </li>
+                    </ul>
+                </li>
+            }
         </NavbarContainer>
     )
 }
