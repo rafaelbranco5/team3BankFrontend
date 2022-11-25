@@ -10,7 +10,7 @@ const NavbarContainer = styled.ul`
     margin: 0;
     padding: 0;
     max-height: 40px;
-    background-color: #602fff;
+    background-color: var(--primary-color);
     padding: 2rem;
     font-family: 'Lato', serif;
     li {
@@ -20,21 +20,25 @@ const NavbarContainer = styled.ul`
             font-size: 1.5rem;
             color: #fff;
         }
+        button {
+            border: none;
+            background: none;
+            font-size: 1.3rem;
+            color: white;
+            cursor: pointer;
+        }
         .notifcationContainer {
             display: flex;
-        }
-        button {
-            background-color: #21b121;
-            border: none;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-transform: uppercase;
-            font-family: 'Open Sans', serif;
-            border-radius: 2px;
-            font-size: .9rem;
-            margin-right: 1rem;
-            margin-top: -6px;
-            cursor: pointer;
+            button {
+                background-color: #21b121;
+                padding: 0.5rem 1rem;
+                text-transform: uppercase;
+                font-family: 'Open Sans', serif;
+                border-radius: 2px;
+                font-size: .9rem;
+                margin-right: 1rem;
+                margin-top: -6px;
+            }
         }
     }
     h2 {
@@ -55,12 +59,12 @@ const NavbarContainer = styled.ul`
     }
 `
 
-function Navbar() {
+function TopNavbar() {
     const [notification, setNotification] = useState(true)
     return (
         <NavbarContainer>
             <li>
-                <a href="#"><GiHamburgerMenu /> </a>
+                <button><GiHamburgerMenu /> </button>
             </li>
             <li>
                 <h2>Real World App</h2>
@@ -78,4 +82,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default TopNavbar

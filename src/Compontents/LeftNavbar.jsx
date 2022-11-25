@@ -6,12 +6,13 @@ import { IoMdNotifications, IoIosLogOut } from 'react-icons/io'
 
 
 const LeftNavbarContainer = styled.div`
-    width: 450px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 2.1rem;
     margin-left: .5rem;
+    margin-right: 1rem;
     font-family: 'Open Sans', serif;
     ul {
         li { list-style: none;}

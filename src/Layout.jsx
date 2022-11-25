@@ -1,22 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import LeftNavbar from './Compontents/LeftNavbar'
-import Navbar from './Compontents/Navbar'
+import TopNavbar from './Compontents/TopNavbar'
 
 const LayoutContainer = styled.main`
     display: flex;
     width: 100%;
+    position: relative;
+    .childrenCont {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
 `
 
 function Layout({ children }) {
     return (
-        <div>
-            <LayoutContainer>
-                <LeftNavbar />
-                <Navbar />
+        <LayoutContainer>
+            <LeftNavbar />
+            <TopNavbar />
+            <div className='childrenCont'>
                 {children}
-            </LayoutContainer>
-        </div>
+            </div>
+        </LayoutContainer>
     )
 }
 
