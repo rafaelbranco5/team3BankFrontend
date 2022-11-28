@@ -1,8 +1,6 @@
-const userEndPoints = {
-    login: '/customers/loginUser',
+export default accountsEndPoints = {
+    login: 'customers/login',
     signUp: '/signUp',
     userSettings: 'user/settings',
     // userBankAcount: 'bankaccount',
 }
-
-export default userEndPoints;

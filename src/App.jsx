@@ -6,14 +6,18 @@ import BankAccount from './pages/BankAccount'
 import Login from './pages/Login'
 import NotFound from './pages/NotFound'
 import Settings from './pages/Settings'
+import SignUp from './pages/SignUp'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState(0)
+
+  // if(!token) return <Login setToken={setToken} />
 
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Login />} /> 
+        <Route path="/signup" element={<SignUp />} /> 
         <Route path="/user/settings" element={<Settings />} /> 
         <Route path="/bankaccount" element={<BankAccount />} /> 
         <Route path="*" element={<NotFound />} /> 

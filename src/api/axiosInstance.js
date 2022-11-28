@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const axiosInstance = axios.create({
+const serverInstance = axios.create({
     // API Gateway URL
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:9002',
 });
+export default serverInstance;
