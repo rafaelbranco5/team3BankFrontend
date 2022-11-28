@@ -72,7 +72,7 @@ function Signup() {
             <form>
                 <div className='input_field'>
                     <span>First Name</span>
-                    <input type='text' id='test' name='firstName'></input>    
+                    <input type='text' name='firstName' required></input>    
                 </div>
                 <div className='input_field'>
                     <span>Last Name</span>
@@ -80,15 +80,15 @@ function Signup() {
                 </div>
                 <div className='input_field'>
                     <span>Username</span>
-                    <input type='email' name='email'></input>
+                    <input type='email' name='email' required></input>
                 </div>
                 <div className='input_field'>
                     <span>Password</span>
-                    <input type='password' name='password'></input>
+                    <input type='password' name='password' required></input>
                 </div>
                 <div className='input_field'>
                     <span>Confirm Password</span>
-                    <input type='password' name='rePassword'></input>
+                    <input type='password' name='rePassword' required></input>
                 </div>
                 <div className='input_field'>
                 <input type='submit' value='SIGN UP'></input>
