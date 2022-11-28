@@ -1,0 +1,29 @@
+.userform{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+}
+form{
+    width: 100%;
+    align-items: center;
+}
+.inputBox{
+    position: relative;
+    width: 60%;
+    padding: 0;
+    margin-left: 20%;
+}
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
