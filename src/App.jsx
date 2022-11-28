@@ -19,15 +19,6 @@ function App() {
         <Route path="*" element={<NotFound />} /> 
       </Routes>
     </div>
-    */
-
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Login />} />
-      </Routes>
-    </Router>
   )
 }
 
